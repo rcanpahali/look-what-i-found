@@ -1,13 +1,13 @@
-import React from "react";
+import React from 'react';
 import {
   BrowserRouter as Router,
   Route,
   Redirect,
   Switch
-} from "react-router-dom";
+} from 'react-router-dom';
 
-import Users from "./user/pages/Users";
-import NewPlace from "./places/pages/NewPlace";
+import Users from './user/pages/Users';
+import NewPlace from './places/pages/NewPlace';
 
 const App = () => {
   return (
@@ -19,7 +19,7 @@ const App = () => {
         <Route path="/places/new" exact>
           <NewPlace />
         </Route>
-        <Redirect to="/"></Redirect>
+        <Redirect to="/" />
       </Switch>
     </Router>
   );

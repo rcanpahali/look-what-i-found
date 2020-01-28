@@ -1,6 +1,6 @@
-import React from "react";
+import React from 'react';
 
-import UsersList from "../components/UsersList";
+import UsersList from '../components/UsersList';
 
 const Users = () => {
   const USERS = [
@@ -11,12 +11,6 @@ const Users = () => {
       placeCount: 12
     }
   ];
-
-  //key={user.id}
-  //id={user.id}
-  //image={user.image}
-  //name={user.name}
-  //placeCount={user.places}
 
   return <UsersList items={USERS} />;
 };
