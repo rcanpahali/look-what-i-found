@@ -7,7 +7,7 @@ import {
   VALIDATOR_MINLENGTH
 } from "../../shared/util/validators";
 
-import { useform, useForm } from "../../shared/hooks/form-hook";
+import { useForm } from "../../shared/hooks/form-hook";
 import "./PlaceForm.css";
 
 const NewPlace = () => {

@@ -20,7 +20,7 @@ const UserPlaces = props => {
     },
     {
       id: "p2",
-      title: "Ayder Yaylası",
+      title: "Ayder Yay.",
       description:
         " 1350m rakımda ladin ve kayın ormanlarıyla kaplı bir yayladır.",
       imageUrl: "https://img.timeturk.com/resim/dresim/20182/buyuk_186.jpg",
