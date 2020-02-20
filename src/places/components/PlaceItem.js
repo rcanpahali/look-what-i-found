@@ -1,4 +1,6 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
+
+import { AuthContext } from "../../shared/context/auto-context";
 
 import Card from "../../shared/components/UIElements/Card";
 import Button from "../../shared/components/FormElements/Button";
@@ -8,6 +10,7 @@ import Map from "../../shared/components/UIElements/Map";
 import "./PlaceItem.css";
 
 const PlaceItem = props => {
+  const auth = useContext(AuthContext);
   const [showMap, setShowMap] = useState(false);
   const [showConfirmModal, setShowConfirmModal] = useState(false);
 
@@ -59,7 +62,8 @@ const PlaceItem = props => {
         }
       >
         <p>
-          Do you want to proceed and delete this place? Please note that <b>it can't be undone</b> thereafter.
+          Do you want to proceed and delete this place? Please note that{" "}
+          <b>it can't be undone</b> thereafter.
         </p>
       </Modal>
       <li className="place-item">
@@ -76,10 +80,14 @@ const PlaceItem = props => {
             <Button inverse onClick={openMapHandler}>
               View On Map
             </Button>
-            <Button to={`/places/${props.id}`}>Edit</Button>
-            <Button danger onClick={showDeleteWarningHandler}>
-              Delete
-            </Button>
+            {auth.isLoggedIn && (
+              <React.Fragment>
+                <Button to={`/places/${props.id}`}>Edit</Button>
+                <Button danger onClick={showDeleteWarningHandler}>
+                  Delete
+                </Button>
+              </React.Fragment>
+            )}
           </div>
         </Card>
       </li>
