@@ -1,7 +1,7 @@
 # look-what-i-found
 
 look-what-i-found (shortly: LWIF) is a MERN stack app. This app is developed with JavaScript based technologies used Mongo DB, Express JS, React JS and Node JS.
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
 
